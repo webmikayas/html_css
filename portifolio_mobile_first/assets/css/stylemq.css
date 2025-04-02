@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+
+/* device breackpoints 
+mobile 600px
+tablet 768px
+desktop 992px
+smart_tv 1200px */
+
+/* Verificando com o Ivan */
+/*
+root ok;
+reset ok;
+html ok;
+body ok;
+header, h1 ok;
+*/
+
+:root {
+  --vermelho1: #bb1c1c;
+  --azlescuro: #09213a;
+  --white1: #dee1e2;
+  --preto: #0e0505;
+  --branco: #fffafa;
+
+  * {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-image: linear-gradient(to bottom, var(--vermelho1), var(--azlescuro));
+  background-repeat:no-repeat;
+  background-position: top;
+  background-attachment: scroll;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: var(--azlescuro);
+  margin-top: 3px;
+  border-radius: 7px 7px 0px 0px;
+  width: 90vw;
+  margin: auto;
+}
+
+header>h1 {
+  text-align: center;
+  color: var(--branco);
+  padding: 3px;
+  text-shadow: var(--preto) 1px 1px 10px;
+  margin-top: 17px;
+}
+#burger {
+  background-color: var(--azlescuro);
+  display: block;
+  color: var(--white1);
+  text-align: center;
+  margin: auto;
+  padding: 7px;
+  width: 90vw;
+  cursor: pointer;
+}
+
+#burger:hover {
+  background-color: var(--vermelho1);
+}
+
+menu {
+  color: var(--branco);
+  text-align: center;
+ /* list-style-type: none;*/
+  width: 90vw;
+  margin: auto;
+}
+
+menu>ul {
+  list-style-type: none;
+}
+
+menu>ul>li>a {
+  display: block;
+  padding: 7px;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--azlescuro);
+  border-radius: 0px 0px 0px 0px;
+  color: var(--branco);
+  margin: auto;
+
+}
+
+menu>ul>li>a:hover {
+  background-color:var(--vermelho1);
+  color: var(--white1);
+  text-decoration: none;
+}
+
+
+section {
+  background-color: var(--vermelho1);
+  width: 90vw;
+  margin: auto;
+  color: var(--branco);
+  text-align: center;
+  border-radius: 7px 7px 8px 8px;
+  margin-top: 7px;
+  padding: 3px;
+}
+
+article>h2 {
+  padding-bottom: 17px;
+}
+
+article>p {
+  text-align: justify;
+  margin-bottom: 17px;
+  text-indent: 17px;
+}
+
+footer {
+  background-color: var(--vermelho1);
+  text-align: center;
+  border-radius: 0px, 0px, 7px, 7px;
+  width: 90vw;
+  padding: 7px;
+  margin: auto;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+img#mobile {
+  display: block;
+}
+
+img#tablet {
+  display: none;
+}
+
+img#print {
+  display: none;
+}
+
+img#pc {
+  display: none;
+}
+
+img#tv {
+  display: none;
+}
+
+/* media para tablet com  largura de tela menor que 768px para o maior de 992px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    background-image: url("../back-tablet.jpg");
+  }
+
+  #burger {
+    display: none;
+  }
+
+  menu {
+    display: block;
+    width: 90vw;
+    margin: auto;
+    background-color: var(--azlescuro);
+  }
+
+  menu>ul>li {
+    display: inline-block;
+    background-color: var(--azlescuro);
+  }
+
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+
+  article>h2 {
+    padding-bottom: 17px;
+    width: 90vw;
+    margin: auto;
+  }
+
+  article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    text-indent: 17px;
+  }
+
+  footer {
+    width: 90vw;
+    margin: auto;
+  }
+
+  /* img {
+    display: block;
+    margin: auto;
+} */
+
+  img#mobile {
+    display: none;
+  }
+
+  img#tablet {
+    display: block;
+  }
+
+  img#print {
+    display: none;
+  }
+
+  img#pc {
+    display: none;
+  }
+
+  img#tv {
+    display: none;
+  }
+}
+
+/* media para pc com  largura de tela menor que 992px para o maior de 1200px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  body {
+    background-image: url("../back-pc.jpg");
+  }
+
+  #burger {
+    display: none;
+  }
+
+  menu {
+    display: block;
+    background-color: var(--azlescuro);
+  }
+
+  menu>ul>li {
+    display: inline-block;
+    background-color: var(--azlescuro);
+  }
+
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+
+  article>h2 {
+    padding-bottom: 17px;
+  }
+
+  article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    text-indent: 17px;
+  }
+
+  footer {
+    width: 90vw;
+    margin: auto;
+  }
+
+  img#mobile {
+    display: none;
+  }
+
+  img#tablet {
+    display: none;
+  }
+
+  img#print {
+    display: none;
+  }
+
+  img#pc {
+    display: block;
+  }
+
+  img#tv {
+    display: none;
+  }
+}
+
+/* media para smart_tv com  largura de tela menor que 992px para o maior de 1200px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 1201px) {
+  body {
+    background-image: url("../back-tv.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+  }
+
+  #burger {
+    display: none;
+  }
+
+  menu {
+    display: block;
+    background-color: var(--azlescuro);
+  }
+
+  menu>ul>li {
+    display: inline-block;
+    background-color: var(--azlescuro);
+  }
+
+  main {
+    width: 90vw;
+    margin: auto;
+  }
+
+  article>h2 {
+    padding-bottom: 17px;
+  }
+
+  article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    text-indent: 17px;
+  }
+
+  footer {
+    width: 90vw;
+    margin: auto;
+  }
+
+  img#mobile {
+    display: none;
+  }
+
+  img#tablet {
+    display: none;
+  }
+
+  img#print {
+    display: none;
+  }
+
+  img#pc {
+    display: none;
+  }
+
+  img#tv {
+    display: block;
+  }
+}
