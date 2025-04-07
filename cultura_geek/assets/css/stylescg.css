@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+:root{
+    --colorprincipal: black;
+    --colorsecundaria: blue;
+    --colordestaque: white;
+   /* --writ:lucinda caligrafy;*/
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+  /*  unidade de medida para mobile first será em viewport( vh,vw - rem, em)*/
+  height: 100vh;
+}
+body{
+    background-image: linear-gradient(to top, var(--colorprincipal), var(--colordestaque));
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+header{
+    background-color: var(--colordestaque);
+    height: 10vh;
+}
+
+menu{
+    background-color: var(--colorsecundaria);
+    height: 0,8vh;
+}
+
+section{
+    background-color: var(--colorsecundaria);
+   /* height: 100vh;*/
+   height: auto;
+}
+
+footer{
+    background-color: var(--colorprincipal);height: 0,7vh;
+}
+
